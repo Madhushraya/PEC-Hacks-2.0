@@ -1,4 +1,4 @@
-# Multimodal Speech and Text Translation
+# Translation Glasses: Empowering Vision with AI
 
 This project provides a comprehensive solution for multimodal input processing, allowing both speech and text inputs to be recognized, translated, and converted into speech in the desired language. It integrates powerful tools such as Vosk for speech recognition, FastText for language detection, Argos Translate for translation, and pyttsx3 for text-to-speech synthesis.
 
