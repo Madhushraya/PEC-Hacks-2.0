@@ -20,11 +20,15 @@ Translation Glasses is a cutting-edge assistive technology designed to empower v
 
 ```
 project
-├── main.py               # Main program integrating all functionalities
-├── vosk_models/          # Directory for storing Vosk models
-├── lid.176.bin           # FastText language identification model
-├── requirements.txt      # List of required Python libraries
-├── README.md             # Project documentation
+├── main.py                   # Main program integrating all functionalities
+├── lid.176.bin               # FastText language identification model
+├── requirements.txt          # List of required Python libraries
+├── README.md                 # Project documentation
+├── Character_Recognition.py  # Function - For recognizing the character from the image captured
+├── Speech_To_Text.py         # Function - For converting the audio to text
+├── Text_To_Speech.py         # Function - For converting the text to speech
+├── lang_detect.py            # Function - For detecting the language of the text extracted
+├── Translation.py            # Function -  For Translating the text into preferred lang
 
 ```
 ## Technology Stack
