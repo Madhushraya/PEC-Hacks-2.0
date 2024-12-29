@@ -14,21 +14,18 @@ Translation Glasses is a cutting-edge assistive technology designed to empower v
 - *Edge Processing:* Efficient, portable on-device processing powered by Raspberry Pi.
 
 ---
+---
 
 ## File Structure
 
+```
 project
--
 ├── main.py               # Main program integrating all functionalities
--
 ├── vosk_models/          # Directory for storing Vosk models
--
 ├── lid.176.bin           # FastText language identification model
--
 ├── requirements.txt      # List of required Python libraries
--
 ├── README.md             # Project documentation
--
+
 
 ## Technology Stack
 
