@@ -8,7 +8,6 @@ Translation Glasses is a cutting-edge assistive technology designed to empower v
 ## Key Features
 
 - *Real-Time Text Recognition:* Extracts text from captured images using advanced OCR (Optical Character Recognition) technology.
-- *Text Recognition*: Perform OCR on visual input using PaddleOCR.
 - *Multi-Language Translation:* Seamlessly translates extracted text into various languages for global usability.
 - *Audio Feedback:* Delivers translated text and recognized objects directly to the user via in-ear audio output.
 - *User-Friendly Design:* Hands-free operation with glasses integrated with a camera module.
@@ -19,7 +18,7 @@ Translation Glasses is a cutting-edge assistive technology designed to empower v
 ## File Structure
 
 
-project/
+project
 ├── main.py               # Main program integrating all functionalities
 ├── vosk_models/          # Directory for storing Vosk models
 ├── lid.176.bin           # FastText language identification model
