@@ -26,7 +26,7 @@ project
 ├── requirements.txt      # List of required Python libraries
 ├── README.md             # Project documentation
 
-
+```
 ## Technology Stack
 
 - *Hardware:*
