@@ -20,7 +20,7 @@ Translation Glasses is a cutting-edge assistive technology designed to empower v
 
 ```
 project
-├── main.py                   # Main program integrating all functionalities
+├── app.py                   # Main program integrating all functionalities
 ├── lid.176.bin               # FastText language identification model
 ├── requirements.txt          # List of required Python libraries
 ├── README.md                 # Project documentation
