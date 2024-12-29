@@ -1,115 +1,140 @@
 # Translation Glasses: Empowering Vision with AI
 
-This project provides a comprehensive solution for multimodal input processing, allowing both speech and text inputs to be recognized, translated, and converted into speech in the desired language. It integrates powerful tools such as Vosk for speech recognition, FastText for language detection, Argos Translate for translation, and pyttsx3 for text-to-speech synthesis.
+## Overview
+Translation Glasses is a cutting-edge assistive technology designed to empower visually impaired individuals by integrating real-time object recognition, text translation, and audio feedback. This project combines advanced machine learning, computer vision, and Raspberry Pi-powered hardware to convert visual input into meaningful auditory cues, enhancing accessibility and independence.
 
-## Features
+---
 
-- **Speech Recognition**: Recognize spoken input using Vosk's ASR models.
-- **Text Recognition**: Perform OCR on visual input using PaddleOCR.
-- **Language Detection**: Automatically detect the input language using FastText.
-- **Translation**: Translate recognized text to a target language using Argos Translate.
-- **Text-to-Speech**: Convert translated text into speech using pyttsx3.
-- **Model Management**: Automatically download Vosk models as needed.
+## Key Features
 
-## Installation
+- *Real-Time Text Recognition:* Extracts text from captured images using advanced OCR (Optical Character Recognition) technology.
+- *Text Recognition*: Perform OCR on visual input using PaddleOCR.
+- *Multi-Language Translation:* Seamlessly translates extracted text into various languages for global usability.
+- *Audio Feedback:* Delivers translated text and recognized objects directly to the user via in-ear audio output.
+- *User-Friendly Design:* Hands-free operation with glasses integrated with a camera module.
+- *Edge Processing:* Efficient, portable on-device processing powered by Raspberry Pi.
 
-### Prerequisites
-
-1. Python 3.8 or later
-2. pip (Python package manager)
-
-### Required Libraries
-
-Install the required Python packages:
-
-```bash
-pip install vosk pyttsx3 paddleocr fasttext opencv-python-headless argostranslate tqdm requests
-```
-
-### Vosk Models
-
-Ensure you have the necessary Vosk models. The program can download them automatically if they are not already available locally.
-
-### FastText Model
-
-Download the FastText language identification model `lid.176.bin`:
-
-```bash
-wget https://dl.fbaipublicfiles.com/fasttext/supervised-models/lid.176.bin
-```
-
-### Argos Translate Models
-
-Argos Translate will dynamically download and install the required language translation models.
-
-## Usage
-
-Run the program and choose between audio or visual input for translation:
-
-```bash
-python main.py
-```
-
-### Audio Mode
-
-- Speak into the microphone.
-- The program detects the spoken language, translates the text to the target language, and plays the translated text as speech.
-
-### Visual Mode
-
-- Use the webcam to capture an image containing text.
-- The program extracts text using OCR, detects the language, translates it, and optionally speaks the translated text.
-
-## Configuration
-
-### Supported Languages
-
-Update the `language_map` in the `speak_text` function to customize supported languages and voices.
-
-### Default Models
-
-The default Vosk models and their URLs are configured in the `model_urls` variable. Modify as needed for additional languages.
+---
 
 ## File Structure
 
-```
+
 project/
 ├── main.py               # Main program integrating all functionalities
 ├── vosk_models/          # Directory for storing Vosk models
 ├── lid.176.bin           # FastText language identification model
 ├── requirements.txt      # List of required Python libraries
 ├── README.md             # Project documentation
-```
 
-## Examples
 
-### Audio Input
+## Technology Stack
 
-1. Speak in any supported language.
-2. The program detects the language, translates it to the target language, and speaks the translation.
+- *Hardware:*
+  - ARM v8 Cortex A-72 (processing unit)
+  - Camera Module (input device)
+  - Audio Module (output device)
 
-### Visual Input
+- *Software:*
+  - Python
+  - PaddleOCR
+  - OpenCV
+  - Google Translate API
+  - TensorFlow
 
-1. Press `c` to capture a frame.
-2. The text in the frame is extracted, translated, and optionally spoken.
+- *Machine Learning:*
+  - Deep learning models for object detection and language translation.
 
-## Troubleshooting
+- *Prototyping:*
+  - Custom-designed 3D-printed frames and hardware integration.
 
-- **Model Not Found**: Ensure Vosk models are downloaded and placed in the `vosk_models` directory.
-- **No Audio Output**: Verify that `pyttsx3` is properly configured for your system.
-- **Dependencies Missing**: Run `pip install -r requirements.txt` to install all required dependencies.
+---
+
+## Applications
+
+- *Assistive Technology:* Enhances independence for visually impaired users by providing auditory guidance.
+- *Real-Time Translation:* Facilitates multilingual communication for travelers and professionals.
+- *Accessibility:* General-purpose text-to-audio conversion for broader accessibility applications.
+
+---
+
+## How It Works
+
+1. *Image Capture:* The integrated camera captures the user’s surroundings or text documents.
+2. *OCR Processing:* OCR technology extracts text from the captured image.
+3. *Text Translation:* The extracted text is translated into the desired language using a translation API.
+4. *Audio Feedback:* The translated text or object labels are conveyed to the user through an audio module.
+
+---
+
+## Get Started
+
+### Prerequisites
+
+To build a prototype, We can start with a raspberry pi first
+- Raspberry Pi (any compatible model with GPIO pins and sufficient processing power)
+- Camera Module (compatible with Raspberry Pi)
+- Python 3.7 or higher
+- Dependencies: Refer to requirements.txt in the repository.
+
+### Installation
+
+1. Clone the repository:
+   bash
+   git clone https://github.com/yourusername/translation-glasses.git
+   
+2. Navigate to the project directory:
+   bash
+   cd translation-glasses
+   
+3. Install dependencies:
+   bash
+   pip install -r requirements.txt
+   
+4. Set up the hardware as per the [Hardware Setup Guide](link-to-hardware-setup).
+
+### Run the Application
+
+Execute the following command to start the program:
+bash
+python main.py
+
+
+---
+
+## Future Enhancements
+
+- *Improved NLP:* Context-aware translations for enhanced accuracy.
+- *Cloud Integration:* Advanced AI capabilities using cloud services.
+- *Language Expansion:* Support for additional languages and text styles.
+- *Ergonomic Design:* Improved hardware for comfort and durability.
+
+---
 
 ## Contributing
+We welcome contributions to improve the Translation Glasses project! Please follow these steps:
 
-Contributions are welcome! Please fork the repository and create a pull request with your changes.
+1. Fork the repository.
+2. Create a feature branch:
+   bash
+   git checkout -b feature-name
+   
+3. Commit your changes:
+   bash
+   git commit -m "Description of changes"
+   
+4. Push to your branch:
+   bash
+   git push origin feature-name
+   
+5. Open a Pull Request.
+
+---
 
 ## License
+This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute the software as per the license terms.
 
-This project is licensed under the MIT License. See `LICENSE` for details.
+---
 
 ## Acknowledgments
-
-- [Vosk](https://alphacephei.com/vosk/)
-- [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR)
-- [FastText](https://fasttext.cc/)
-- [Argos Translate](https://github.com/argosopentech/argos-translate)
+- Special thanks to the open-source community for tools and libraries like PaddleOCR, OpenCV, and TensorFlow.
+- Inspired by the potential of AI to create accessible technology for everyone.
